@@ -3,211 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pete Quiñones IV — Train. Fuel. Build.</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
-    :root {
-      --bg: #000000;
-      --text: #ffffff;
-      --muted: #a1a1a1;
-      --body: #d1d1d1;
-      --accent: #eab308;
-      --line: #262626;
-    }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-    h1, h2, h3 { font-family: 'JetBrains Mono', ui-monospace, monospace; }
-    .fuel, .kaizen, .accent { color: var(--accent); }
-    a.link {
-      color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1px;
-    }
-    a.link:hover { color: #facc15; }
-    .rule { border-color: var(--line); }
-    .section-pin { height: 100vh; }
-  </style>
+  <title>Pete Quinones IV — Fueling Athletes + Building the Dream</title>
+  <meta name="description" content="Fueling athletes + building the dream. Former line cook, founder of Kaizen Fuel Kitchen and The Kaizen Tribe, and endurance athlete in San Antonio, Texas." />
+  <link rel="stylesheet" href="css/site.css" />
 </head>
-<body class="antialiased">
+<body>
+  <button class="menu-btn" type="button">Menu</button>
+  <nav class="nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="https://letters.thekaizentribe.co/about">About</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="notes.html">Notes</a>
+    <a href="races.html">Races</a>
+    <a href="links.html">Links</a>
+    <a href="contact.html">Contact</a>
+    <button type="button" data-theme-toggle>Light</button>
+  </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-    <div class="relative z-10 text-center px-6 max-w-5xl">
-      <p class="text-sm tracking-[0.3em] uppercase text-[#a1a1a1] mb-6 font-mono opacity-0" id="hero-sub">San Antonio · TX</p>
-      <h1 class="text-5xl md:text-8xl font-bold leading-none tracking-tight opacity-0" id="hero-name">
-        PETE<br>QUIÑONES IV
-      </h1>
-      <p class="mt-8 text-xl md:text-2xl font-light text-[#d1d1d1] max-w-2xl mx-auto opacity-0" id="hero-tag">
-        From line cook → system builder.<br>
-        <span class="accent font-semibold">Train.</span> <span class="accent font-semibold">Fuel.</span> <span class="font-semibold text-white">Build.</span>
-      </p>
-      <div class="mt-16 opacity-0" id="hero-scroll">
-        <p class="text-xs tracking-widest uppercase text-[#a1a1a1] font-mono">Scroll the story</p>
-        <div class="w-px h-16 bg-gradient-to-b from-[#eab308] to-transparent mx-auto mt-4"></div>
+  <main class="wrap">
+    <header class="header">
+      <img class="avatar" src="assets/pete-portrait.jpeg" alt="Pete Quinones IV in San Antonio, Texas" />
+      <div>
+        <h1>Pete Quinones IV</h1>
+        <p class="tagline">Fueling athletes + building the dream</p>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- CHAPTER 1: THE LINE -->
-  <section class="relative min-h-screen flex items-center py-32 px-6 border-t border-[#262626]">
-    <div class="max-w-4xl mx-auto">
-      <p class="accent text-sm tracking-widest uppercase mb-4 font-mono">Chapter 01</p>
-      <h2 class="text-4xl md:text-6xl font-bold mb-8">The Line</h2>
-      <div class="space-y-6 text-lg md:text-xl text-[#d1d1d1] leading-relaxed">
-        <p>12+ years on the line. 10–12 hour shifts. Heat, pressure, repetition.</p>
-        <p>I was a 280–295 lb line cook trying to figure out what the hell to do with myself.</p>
-        <p class="text-white font-medium">Most people stay there. I started training before the shift.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHAPTER 2: THE SHIFT + STATS -->
-  <section class="relative min-h-screen py-32 px-6 border-t border-[#262626]">
-    <div class="max-w-6xl mx-auto">
-      <p class="accent text-sm tracking-widest uppercase mb-4 font-mono">Chapter 02</p>
-      <h2 class="text-4xl md:text-6xl font-bold mb-16">The Shift</h2>
-      
-      <div class="grid md:grid-cols-3 gap-12 mb-20">
-        <div class="text-center">
-          <div class="text-5xl md:text-7xl font-bold accent counter font-mono" data-target="100">0</div>
-          <p class="mt-2 text-[#a1a1a1]">+ lbs transformed</p>
-        </div>
-        <div class="text-center">
-          <div class="text-5xl md:text-7xl font-bold text-white counter font-mono" data-target="12">0</div>
-          <p class="mt-2 text-[#a1a1a1]">years on the line</p>
-        </div>
-        <div class="text-center">
-          <div class="text-5xl md:text-7xl font-bold text-white counter font-mono" data-target="1">0</div>
-          <p class="mt-2 text-[#a1a1a1]">marathon in progress</p>
-        </div>
-      </div>
-
-      <p class="text-xl md:text-2xl text-[#d1d1d1] max-w-3xl leading-relaxed">
-        Morning miles. Push-ups. Scripture. To-do list.<br>
-        I rebuilt the body while still working the line.<br>
-        Then I started fueling other people the same way.
-      </p>
-    </div>
-  </section>
-
-  <!-- CHAPTER 3: THE BUILD -->
-  <section class="relative min-h-screen flex items-center py-32 px-6 border-t border-[#262626]">
-    <div class="max-w-4xl mx-auto">
-      <p class="accent text-sm tracking-widest uppercase mb-4 font-mono">Chapter 03</p>
-      <h2 class="text-4xl md:text-6xl font-bold mb-8">Kaizen Fuel Kitchen</h2>
-      <div class="space-y-6 text-lg md:text-xl text-[#d1d1d1] leading-relaxed">
-        <p>I was the line cook who needed high-protein meals that actually fit real life — long shifts, early training, tight time and money.</p>
-        <p>So I built the system myself.</p>
-        <p class="text-white">Now I cook for athletes, runners, fighters, and busy high-performers in San Antonio. Weekly packs. Clean macros. Ready in minutes.</p>
-        <p>Pickup at Gold’s Gym Quarry. Delivery across the city. No guesswork. Just fuel.</p>
-      </div>
-      <a href="https://kaizenfuelkitchen.com" target="_blank" rel="noopener noreferrer" class="link inline-block mt-12 text-lg font-medium">
-        Order this week’s fuel →
+    <div class="socials">
+      <a href="https://x.com/petex47" aria-label="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/petex47/" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@petex47" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5v-7l6.2 3.5-6.2 3.5z"/></svg>
+      </a>
+      <a href="mailto:pete@thekaizentribe.co" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
       </a>
     </div>
-  </section>
 
-  <!-- CHAPTER 4: THE TRIBE -->
-  <section class="relative min-h-screen py-32 px-6 border-t border-[#262626]">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="accent text-sm tracking-widest uppercase mb-4 font-mono">Chapter 04</p>
-      <h2 class="text-4xl md:text-6xl font-bold mb-8">The Kaizen Tribe</h2>
-      <p class="text-xl text-[#d1d1d1] mb-16 max-w-2xl mx-auto">
-        Meals + systems + accountability.<br>
-        Helping busy people fuel better and build a life they’re proud of.
-      </p>
-      <div class="grid md:grid-cols-3 gap-8 text-left">
-        <a href="https://kaizenfuelkitchen.com" class="p-8 border border-[#262626] hover:border-[#eab308] transition">
-          <h3 class="font-bold text-xl mb-2">Fuel Kitchen</h3>
-          <p class="text-[#a1a1a1] text-sm">Weekly performance meals</p>
+    <div class="prose">
+      <p>I'm a former line cook building businesses, building endurance, and documenting the process from San Antonio, Texas.</p>
+      <p>I spent more than 12 years working in kitchens. Long shifts, hot lines, prep lists, and dinner rushes taught me how to stay calm, move fast, and keep showing up when I'm tired.</p>
+      <p>Eventually, I stopped waiting for the perfect time and started building my own thing. Today I'm growing <a href="https://kaizenfuelkitchen.com">Kaizen Fuel Kitchen</a>, building <a href="https://thekaizentribe.co">The Kaizen Tribe</a>, training for endurance events, and <a href="https://letters.thekaizentribe.co">sharing what I learn</a> along the way.</p>
+      <p>I'm interested in food, discipline, business, endurance, documenting, and the process of becoming who you say you are.</p>
+      <p>Latest note: <a href="notes/keep-showing-up.html">The compounding power of just showing up</a> — July 2026</p>
+    </div>
+
+    <section class="section">
+      <p class="kicker">01 / Projects</p>
+      <h2>Current bets + projects</h2>
+      <div class="projects">
+        <a class="project" href="https://kaizenfuelkitchen.com">
+          <h3>Kaizen Fuel Kitchen <span>↗</span></h3>
+          <p>Performance meal prep · San Antonio</p>
         </a>
-        <a href="https://petex47.substack.com" class="p-8 border border-[#262626] hover:border-[#eab308] transition">
-          <h3 class="font-bold text-xl mb-2">The Journal</h3>
-          <p class="text-[#a1a1a1] text-sm">Lessons, systems, real notes</p>
+        <a class="project" href="https://thekaizentribe.co">
+          <h3>The Kaizen Tribe <span>↗</span></h3>
+          <p>Internet friends trying to become harder to kill</p>
         </a>
-        <a href="https://train-fuel-build.lovable.app/auth" class="p-8 border border-[#262626] hover:border-[#eab308] transition">
-          <h3 class="font-bold text-xl mb-2">56-Day Sprint</h3>
-          <p class="text-[#a1a1a1] text-sm">Train. Fuel. Build. Consistency</p>
+        <a class="project" href="https://letters.thekaizentribe.co">
+          <h3>Letters from The Kaizen Tribe <span>↗</span></h3>
+          <p>A weekly field note documenting the journey from line cook to disciplined founder — building Kaizen Fuel Kitchen + fueling athletes</p>
+        </a>
+        <a class="project" href="https://trainfuelbuild.com">
+          <h3>Train. Fuel. Build. — 56-Day Sprint <span>BETA</span></h3>
+          <p>A streak tracker for people who actually want to change</p>
+        </a>
+        <a class="project" href="https://www.strava.com/athletes/106481123">
+          <h3>The Endurance Project <span>↗</span></h3>
+          <p>Running, endurance training, and the daily miles</p>
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- NOW + LINKS -->
-  <section class="relative min-h-screen flex flex-col items-center justify-center py-32 px-6 text-center border-t border-[#262626]">
-    <h2 class="text-4xl md:text-6xl font-bold mb-6">Still building.</h2>
-    <p class="text-xl text-[#a1a1a1] max-w-2xl mb-16">
-      Documenting the journey in public.<br>
-      Vibe-coding systems. Making small bets.<br>
-      Never fucking give up.
-    </p>
-    <div class="flex flex-wrap justify-center gap-8">
-      <a href="https://www.instagram.com/petex47/" class="link">Instagram</a>
-      <a href="https://x.com/petex47" class="link">X</a>
-      <a href="https://thekaizentribe.co" class="link">Kaizen Tribe</a>
-      <a href="mailto:kaizenfuelkitchen@gmail.com" class="link">Email me</a>
-    </div>
-    <p class="mt-24 text-sm text-[#a1a1a1] font-mono">© Pete Quiñones IV · petex47.com · Built with kaizen</p>
-  </section>
+    <section class="section">
+      <h2>images on my computer in a folder named "keep going" inspired by jack friks</h2>
+      <div class="gallery">
+        <img src="assets/image-111.png" alt="I'm tired too brother but we have dreams to chase" />
+        <img src="assets/image-106.png" alt="Drawing of a man injecting a giant syringe labeled HOPE" />
+        <img src="assets/image-107.png" alt="I want to see what happens if I don't give up" />
+        <img src="assets/image-108.png" alt="Whoever prayed on my downfall, pray harder" />
+        <img src="assets/image-109.png" alt="I'm tired too brother but we have dreams to chase" />
+        <img src="assets/image-110.png" alt="No amount of waiting will make me brave and no amount of fear will keep me safe" />
+        <img src="assets/only-way-out.jpg" alt="The only way out is through" />
+        <img src="assets/do-you-have-a-problem.jpg" alt="Do you have a problem decision flowchart" />
+        <img src="assets/big-dawg-billboard.jpg" alt="Big dawg billboard" />
+        <img src="assets/ben10-monster.jpg" alt="Ben 10 holding an energy drink" />
+        <img src="assets/focused-fool.jpg" alt="A focused fool accomplishes more than a distracted genius" />
+      </div>
+      <p style="margin-top:20px"><a class="link" href="keep-going.html">view all images →</a></p>
+    </section>
 
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
+    <section class="section">
+      <p class="kicker">02 / Contact</p>
+      <h2><a class="link" href="contact.html">Shoot me a message →</a></h2>
+    </section>
 
-    // Hero entrance
-    gsap.timeline()
-      .to("#hero-sub", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" })
-      .to("#hero-name", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.4")
-      .to("#hero-tag", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.5")
-      .to("#hero-scroll", { opacity: 1, duration: 0.6 }, "-=0.3");
+    <section class="section">
+      <h2>Letters from The Kaizen Tribe</h2>
+      <p class="prose" style="color:var(--body);font-size:17px">A weekly field note documenting the journey from line cook to disciplined founder — building Kaizen Fuel Kitchen + fueling athletes</p>
+      <p><a class="link" href="https://letters.thekaizentribe.co">Subscribe →</a></p>
+    </section>
 
-    // Counters
-    document.querySelectorAll(".counter").forEach(el => {
-      const target = +el.dataset.target;
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top 80%",
-        onEnter: () => {
-          gsap.to(el, {
-            innerText: target,
-            duration: 2,
-            snap: { innerText: 1 },
-            ease: "power2.out"
-          });
-        }
-      });
-    });
-
-    // Simple fade-ups for chapters (skip hero; its timeline owns those nodes)
-    gsap.utils.toArray("h2, p").forEach(el => {
-      if (el.closest("#hero")) return;
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: "top 85%" },
-        opacity: 0,
-        y: 40,
-        duration: 0.9,
-        ease: "power3.out"
-      });
-    });
-  </script>
+    <footer class="footer">Made by Pete Quinones IV 2026</footer>
+  </main>
+  <script src="js/site.js"></script>
 </body>
 </html>
