@@ -51,7 +51,7 @@
 <body class="antialiased">
 
   <!-- HERO -->
-  <section class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+  <section id="hero" class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
     <div class="relative z-10 text-center px-6 max-w-5xl">
       <p class="text-sm tracking-[0.3em] uppercase text-[#a1a1a1] mb-6 font-mono opacity-0" id="hero-sub">San Antonio · TX</p>
       <h1 class="text-5xl md:text-8xl font-bold leading-none tracking-tight opacity-0" id="hero-name">
@@ -121,7 +121,7 @@
         <p class="text-white">Now I cook for athletes, runners, fighters, and busy high-performers in San Antonio. Weekly packs. Clean macros. Ready in minutes.</p>
         <p>Pickup at Gold’s Gym Quarry. Delivery across the city. No guesswork. Just fuel.</p>
       </div>
-      <a href="https://kaizenfuelkitchen.com" target="_blank" class="link inline-block mt-12 text-lg font-medium">
+      <a href="https://kaizenfuelkitchen.com" target="_blank" rel="noopener noreferrer" class="link inline-block mt-12 text-lg font-medium">
         Order this week’s fuel →
       </a>
     </div>
@@ -197,8 +197,9 @@
       });
     });
 
-    // Simple fade-ups for chapters
+    // Simple fade-ups for chapters (skip hero; its timeline owns those nodes)
     gsap.utils.toArray("h2, p").forEach(el => {
+      if (el.closest("#hero")) return;
       gsap.from(el, {
         scrollTrigger: { trigger: el, start: "top 85%" },
         opacity: 0,
