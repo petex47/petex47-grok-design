@@ -4,13 +4,13 @@
 
 :root,
 html[data-theme="light"] {
-  --pane-bg: #fdfbf3;
+  --pane-bg: #f8f5ed;
   --pane-text: #0a0a0a;
   --pane-muted: #4a4a4a;
   --pane-faint: #7a7a7a;
   --pane-border: #e6e1d2;
   --sidebar-bg: #0a0a0a;
-  --sidebar-text: #fdfbf3;
+  --sidebar-text: #f8f5ed;
   --sidebar-muted: #b8b8b8;
   --sidebar-hover: #1a1a1a;
   --sidebar-border: #222222;
