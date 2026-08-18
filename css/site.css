@@ -12,7 +12,7 @@
 }
 
 html[data-theme="light"] {
-  --bg: #f7f7f5;
+  --bg: #f8f5ed;
   --text: #111111;
   --body: #333333;
   --muted: #666666;
