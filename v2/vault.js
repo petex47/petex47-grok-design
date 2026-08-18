@@ -73,6 +73,7 @@ The longer about page lives on [Letters from The Kaizen Tribe](https://letters.t
 
 - [X](https://x.com/petex47)
 - [Instagram](https://www.instagram.com/petex47/)
+- [Cursor](https://cursor.com/@petex47)
 
 ## For work
 
@@ -216,7 +217,7 @@ Every improvement to the system compounds. Every shortcut costs trust.
       folder: "Notes",
       markdown: `April 2026
 
-I'm not a professional engineer. I'm a cook who learned to ship.
+I'm not a professional engineer. I'm a cook who learned to ship. I build in public on [Cursor](https://cursor.com/@petex47).
 
 Lovable collapses the distance between the idea in my head and the thing running on the internet. That means I get to test ideas the same week I have them, and the ones that survive get more of my time.
 
