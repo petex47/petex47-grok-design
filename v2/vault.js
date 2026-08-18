@@ -11,7 +11,7 @@ window.PETEX47_VAULT = {
       path: "Pete Quinones IV",
       title: "Pete Quinones IV",
       folder: null,
-      markdown: `Former line cook building businesses, building endurance, and documenting the process from San Antonio, Texas.
+      markdown: `Former ==line cook== building businesses, building endurance, and documenting the process from ==San Antonio==, Texas.
 
 I spent more than 12 years working in kitchens. Long shifts, hot lines, prep lists, and dinner rushes taught me how to stay calm, move fast, and keep showing up when I'm tired.
 

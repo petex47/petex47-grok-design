@@ -35,6 +35,7 @@
 
   function inlineFormat(raw) {
     let s = escapeHtml(raw);
+    s = s.replace(/==([^=]+)==/g, '<mark>$1</mark>');
     s = s.replace(/\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]/g, (_, title, alias) => {
       const t = title.trim();
       const label = (alias || title).trim();
@@ -187,6 +188,7 @@
       </div>
       <nav class="tree" aria-label="Files">${renderTree(activePath)}</nav>
       <div class="sidebar-foot">
+        <button type="button" class="theme-toggle" data-theme-toggle>${document.documentElement.getAttribute("data-theme") === "dark" ? "Light" : "Dark"}</button>
         <a href="../index.html">← editorial site</a>
       </div>
     `;
@@ -256,6 +258,14 @@
   });
 
   document.addEventListener("click", (e) => {
+    const themeBtn = e.target.closest("[data-theme-toggle]");
+    if (themeBtn) {
+      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("v2-theme", next);
+      themeBtn.textContent = next === "dark" ? "Light" : "Dark";
+      return;
+    }
     const toggle = e.target.closest("[data-toggle-folder]");
     if (toggle) {
       const name = toggle.getAttribute("data-toggle-folder");

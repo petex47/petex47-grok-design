@@ -6,6 +6,14 @@
   <title>petex47 — vault</title>
   <meta name="description" content="Obsidian Publish-style vault for Pete Quinones IV — projects, notes, and log." />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get("theme");
+      var saved = localStorage.getItem("v2-theme");
+      var theme = q === "dark" || q === "light" ? q : saved === "dark" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
   <button class="menu-btn" type="button" aria-label="Open file tree">Menu</button>
